@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { MemeUploaderProvider } from '../src/context/MemeUploaderContext'
+
 
 ReactDOM.render(
+  <Router>
+  <MemeUploaderProvider>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+  </MemeUploaderProvider>
+  </Router>
+  ,
   document.getElementById('root')
 );
 
