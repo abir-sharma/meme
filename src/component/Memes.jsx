@@ -58,10 +58,10 @@ const SingleMeme=({img})=>{
 }
 
 const Memes = () => {
-  const { imgs,imgCount,transactions}=useContext(MemeUploaderContext)
+  const { imgs,imgCount,currentAccount}=useContext(MemeUploaderContext)
   return (
     <>
-    <h1>{imgCount}</h1>
+    {currentAccount?<h1>{`${imgCount} Memes Available`}</h1>:<h1>Connect wallet to get started !!!!</h1>}
     <div class="container my-4">
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">

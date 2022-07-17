@@ -44,7 +44,7 @@ export const MemeUploaderProvider = ({ children }) => {
             if (!ethereum) return alert("Please install metamask")
             const accounts = await ethereum.request({ method: 'eth_requestAccounts' })
             setCurrentAccount(accounts[0])
-            window.reload()
+            window.location.reload();
         } catch (error) {
             throw new Error("No ethereum object")
         }
